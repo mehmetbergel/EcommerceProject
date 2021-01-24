@@ -16,4 +16,4 @@
 
 # Notlar
 - Projenin kaynak kodlarına "EcommerceProject.sln" dosyasından ulaşabilirsiniz
-- Projede kullandığım veritabanını "bak" uzantılı dosya şeklinde ve script olarak oluşturdum. Sizin için uygun olan şekliyle kullanabilirsiniz
+- Projede kullandığım veritabanını, "DB Files" klasörünün altında, "bak" uzantılı dosya şeklinde ve script olarak oluşturdum. Sizin için uygun olan şekliyle kullanabilirsiniz
