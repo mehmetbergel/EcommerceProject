@@ -1,0 +1,52 @@
+﻿@using Ecommerce.BLL.ViewModel
+@model StockViewModel
+
+@{
+    ViewBag.Title = "Yeni Ürün Ekle";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Add", "Stock", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="input-group">
+        <span class="input-group-addon" id="txtBarcode">Barkod </span>
+        @Html.TextBoxFor(x => x.Barcode, new { @class = "form-control", @placeholder = "Ürün barkodu giriniz", @aria_describedby = "txtBarcode", @required = "required" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txtName">Adı </span>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Ürün adı giriniz", @aria_describedby = "txtName", @required = "required" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txtPrice">Tutar </span>
+        @Html.TextBoxFor(x => x.Price, new { @class = "form-control", @placeholder = "Ürün tutarı giriniz", @aria_describedby = "txtPrice", @required = "required" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txtQuantity">Adet </span>
+        @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control", @placeholder = "Ürün adedi giriniz", @aria_describedby = "txtQuantity", @type = "number", @required = "required" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txtDescription">Açıklama </span>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control", @placeholder = "Ürün açıklaması giriniz", @aria_describedby = "txtDescription" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txtImage">Görsel </span>
+        <input type="file" class="multi" accept="jpeg|jpg|png" name="selectedFiles" /><br />
+    </div>
+    <br />
+    <div class="input-group form-group">
+        @if (ViewBag.Message != null)
+        {
+            <p class="alert alert-danger" id="successMessage">@ViewBag.Message</p>
+        }
+    </div>
+    <div class="input-group">
+        <input type="submit" id="btnSave" value="Kayıt" class="btn btn-success" />
+    </div>
+}

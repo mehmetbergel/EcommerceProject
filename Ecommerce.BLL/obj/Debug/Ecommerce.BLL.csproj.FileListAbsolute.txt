@@ -1,0 +1,15 @@
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\Ecommerce.BLL.dll.config
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\Ecommerce.BLL.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\Ecommerce.BLL.pdb
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\Ecommerce.DAL.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\EntityFramework.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\Ecommerce.DAL.pdb
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\Ecommerce.DAL.dll.config
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\EntityFramework.xml
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\obj\Debug\Ecommerce.BLL.csprojAssemblyReference.cache
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\obj\Debug\Ecommerce.BLL.csproj.CoreCompileInputs.cache
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\obj\Debug\Ecommerce.BLL.csproj.CopyComplete
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\obj\Debug\Ecommerce.BLL.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.BLL\obj\Debug\Ecommerce.BLL.pdb

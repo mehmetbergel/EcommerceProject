@@ -1,0 +1,11 @@
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\bin\Debug\Ecommerce.DAL.dll.config
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\bin\Debug\Ecommerce.DAL.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\bin\Debug\Ecommerce.DAL.pdb
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\bin\Debug\EntityFramework.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\bin\Debug\EntityFramework.xml
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\obj\Debug\Ecommerce.DAL.csproj.CoreCompileInputs.cache
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\obj\Debug\Ecommerce.DAL.csproj.CopyComplete
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\obj\Debug\Ecommerce.DAL.dll
+D:\Masaüstü Yedek\MehmetBergel\EcommerceProject\Ecommerce.DAL\obj\Debug\Ecommerce.DAL.pdb

@@ -1,0 +1,25 @@
+﻿@using Ecommerce.BLL.ViewModel
+@model StockViewModel
+
+@{
+    ViewBag.Title = "Ürün Sil";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="input-group">
+        <span class="input-group-addon" id="txtBarcode">Barkod </span>
+        @Html.TextBoxFor(x => x.Barcode, new { @class = "form-control", @placeholder = "Please insert stock barcode", @aria_describedby = "txtBarcode", @readonly = "readonly" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txtName">Adı </span>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Please insert stock name", @aria_describedby = "txtName", @readonly = "readonly" })
+    </div>
+    <br />
+    <div class="input-group">
+        <input type="submit" value="Sil" class="btn btn-danger" />
+    </div>
+}

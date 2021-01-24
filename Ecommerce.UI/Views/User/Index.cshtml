@@ -1,0 +1,60 @@
+﻿@model Ecommerce.BLL.ViewModel.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    @Styles.Render("~/Content/logincss")
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <img class="img-responsive" src="~/Content/images/inveon_logo.png" style="width:100%" />
+                </div>
+                <br />
+                <div class="card-body">
+                    @using (Html.BeginForm("Login", "User", FormMethod.Post, new { id = "loginForm", @class = "login-form" }))
+                    {
+                        <form>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { placeholder = "Kullanıcı Adı", @class = "form-control", @required = "required" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Username)
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = "Parola", @class = "form-control", @required = "required" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Password)
+                            <div class="input-group form-group">
+                                @if (ViewBag.Message != null)
+                                {
+                                    <p class="alert alert-danger" id="successMessage">@ViewBag.Message</p>
+                                }
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Giriş" class="btn float-right login_btn">
+                            </div>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

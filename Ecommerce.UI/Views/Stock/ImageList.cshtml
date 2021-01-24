@@ -1,0 +1,22 @@
+﻿@using Ecommerce.DAL.EntityDataModels
+@model List<StockImage>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<div id="slider" class="carousel slide" data-interval="10000">
+    <div class="carousel-inner">
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            <div class="item @if(i==0){<text>active</text>}">
+                <img src="@Model[i].Source" alt="Click for zoom" />
+            </div>
+        }
+
+    </div>
+    <a class="carousel-control left" href="#slider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+
+    <a class="carousel-control right" href="#slider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>

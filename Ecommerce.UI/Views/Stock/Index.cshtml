@@ -1,0 +1,117 @@
+﻿@using Ecommerce.BLL.ViewModel
+@model List<StockViewModel>
+
+@{
+    ViewBag.Title = "Ana Sayfa";
+}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    @if (TempData["Success"] != null)
+    {
+        <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
+    }
+    @if (TempData["Fail"] != null)
+    {
+        <p class="alert alert-danger" id="successMessage">@TempData["Fail"]</p>
+    }
+
+    <h3>Ürün Listesi</h3>
+    <table class="table">
+        <thead style="background-color:aliceblue">
+            <tr>
+                <th style="visibility:hidden">Id</th>
+                <th>Görsel</th>
+                <th>Barkod</th>
+                <th>Adı</th>
+                <th>Tutar</th>
+                <th>Adet</th>
+                <th>Açıklama</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th style="visibility:hidden">@Html.DisplayFor(x => item.Id)</th>
+                    <th style="width:200px;padding:0 0 0 10px">
+                        <a href="#" class="view" data-target="/Stock/ImageList/@item.Id">
+                            @if (!string.IsNullOrEmpty(item.BaseImage))
+                            {
+                                <img src="@item.BaseImage" style="width:50%" alt="Daha Fazla Görsel İçin Tıklayınız..." title="Daha Fazla Görsel İçin Tıklayınız..." />
+                            }
+                            else
+                            {
+
+                                <img src="~/Content/images/noimage.png" style="width:50%" alt="Daha Fazla Görsel İçin Tıklayınız..." />
+                            }
+
+                        </a>
+                    </th>
+                    <th>@Html.DisplayFor(x => item.Barcode)</th>
+                    <th>@Html.DisplayFor(x => item.Name)</th>
+                    <th>@Html.DisplayFor(x => item.Price) ₺</th>
+                    <th>@Html.DisplayFor(x => item.Quantity)</th>
+                    <th>@Html.DisplayFor(x => item.Description)</th>
+                    @if (ViewBag.RoleId == "1")
+                    {
+                        <td>@Html.ActionLink("Düzenle", "Edit", new { barcode = item.Barcode }, new { @class = "btn btn-warning" })</td>
+                        <td>@Html.ActionLink("Sil", "Delete", new { barcode = item.Barcode }, new { @class = "btn btn-danger" })</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="container">
+        <div class="modal fade" id="modelView" tabindex="-1" role="dialog" aria-labelledby="">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <form method="post">
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Çıkış</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(function () {
+        // a tagimizde bulunan .view classımıza click olduğunda
+        $("body").on("click", ".view", function () {
+            //data-target dan url mizi al
+            var url = $(this).data("target");
+            //bu urlimizi post et
+            $.post(url, function (data) { })
+                //eğer işlemimiz başarılı bir şekilde gerçekleşirse
+                .done(function (data) {
+                    //gelen datayı .modal-body mizin içerise html olarak ekle
+                    $("#modelView .modal-body").html(data);
+                    //sonra da modalimizi göster
+                    $("#modelView").modal("show");
+                })
+                //eğer işlem başarısız olursa
+                .fail(function () {
+                    //modalımızın bodysine Error! yaz
+                    $("#modelView .modal-body").text("Error!!");
+                    //sonra da modalimizi göster
+                    $("#modelView").modal("show");
+                })
+        });
+    })
+</script>
