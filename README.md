@@ -1,12 +1,12 @@
 # InveonEcommerce
 
 
-# Teknikler
+# Techniques
 - Object Oriented Programming (OOP)
 - SOLID Principles
 
 
-# Teknolojiler
+# Technologies
 - ASP.NET MVC
 - MSSQL
 - Entity Framework
@@ -14,6 +14,6 @@
 - Javascript
 
 
-# Notlar
-- Projenin kaynak kodlarına "EcommerceProject.sln" dosyasından ulaşabilirsiniz
-- Projede kullandığım veritabanını, "DB Files" klasörünün altında, "bak" uzantılı dosya şeklinde ve script olarak oluşturdum. Sizin için uygun olan şekliyle kullanabilirsiniz
+# Notes
+- You can access the source code of the project from the "EcommerceProject.sln" file.
+- I created the database used in the project as a ".bak" file under the "DB Files" folder, both as a backup and as a script. You can use it in the way that suits you best.
